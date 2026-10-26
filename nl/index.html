@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gravio Plus – Digitale transportopdracht voor Android</title>
+<link rel="alternate" hreflang="de" href="https://sevens7ch-tech.github.io/Website-Gravio-Plus/"><link rel="alternate" hreflang="en" href="https://sevens7ch-tech.github.io/Website-Gravio-Plus/en/"><link rel="alternate" hreflang="it" href="https://sevens7ch-tech.github.io/Website-Gravio-Plus/it/"><link rel="alternate" hreflang="nl" href="https://sevens7ch-tech.github.io/Website-Gravio-Plus/nl/"><link rel="alternate" hreflang="fr" href="https://sevens7ch-tech.github.io/Website-Gravio-Plus/fr/"><link rel="alternate" hreflang="es" href="https://sevens7ch-tech.github.io/Website-Gravio-Plus/es/"><link rel="alternate" hreflang="x-default" href="https://sevens7ch-tech.github.io/Website-Gravio-Plus/">
+<script>(function(){try{document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');if(a)localStorage.setItem('gravio_lang',a.getAttribute('data-lang'));});}catch(e){}})();</script>
+<meta name="description" content="Gravio Plus: transportopdracht, overdrachtsprotocol met handtekening, foto’s, rittenarchief en pdf via WhatsApp – de app voor zwaar transport en kraanwerk.">
+<link rel="icon" href="../logo.png">
+<style>
+@font-face{font-family:'Open Sans';src:url('../fonts/OpenSans-Variable.ttf') format('truetype');font-weight:300 800;font-display:swap}
+html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:#09090b}
+a{color:#fbbf24}a:hover{color:#fcd34d}
+svg.ic{width:22px;height:22px;flex-shrink:0}
+</style>
+</head>
+<body>
+<!-- © 2026 Christian Haake, alle Rechte vorbehalten -->
+<div style="font-family: 'Open Sans', system-ui, sans-serif; color: #f4f4f5; background: #09090b; min-height: 100vh">
+
+  <!-- Kopfzeile wie in der App: rot-weiße Warnbake -->
+  <header style="position: sticky; top: 0; z-index: 10; background: linear-gradient(135deg, #dc2626 0 20%, #ffffff 20% 40%, #dc2626 40% 60%, #ffffff 60% 80%, #dc2626 80% 100%); border-bottom: 3px solid #991b1b; box-shadow: 0 8px 24px rgba(0,0,0,.35)">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+      <a href="#top" aria-label="Gravio Plus startpagina" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; position: relative">
+        <img src="../logo.png" alt="Gravio" style="height: 52px; width: auto; filter: drop-shadow(1px 2px 2px rgba(0,0,0,.35))">
+        <span style="position: absolute; right: -26px; bottom: 14px; background: #18181b; color: #facc15; border: 1px solid #facc15; border-radius: 5px; font-size: 10px; font-weight: 800; letter-spacing: .14em; padding: 3px 4px 3px 6px; transform: rotate(-8deg)">PLUS</span>
+        <span style="font-family: 'Dancing Script', 'Segoe Script', 'Brush Script MT', cursive; font-weight: 700; font-size: 11px; color: #000000; margin-top: 1px">© Christian Haake</span>
+      </a>
+      <nav aria-label="Hoofdnavigatie" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+        <div class="lang-switch" role="group" aria-label="Sprache / Language" style="display: inline-flex; flex-wrap: wrap; gap: 2px; padding: 4px; border-radius: 999px; background: #27272a; box-shadow: 0 2px 6px rgba(0,0,0,.3)"><a href="../" hreflang="de" lang="de" title="Deutsch" data-lang="de" style="display: inline-flex; align-items: center; justify-content: center; min-width: 36px; min-height: 36px; padding: 0 6px; border-radius: 999px; background: transparent; color: #f4f4f5; font-size: 12px; font-weight: 800; letter-spacing: .04em; text-decoration: none">DE</a><a href="../en/" hreflang="en" lang="en" title="English" data-lang="en" style="display: inline-flex; align-items: center; justify-content: center; min-width: 36px; min-height: 36px; padding: 0 6px; border-radius: 999px; background: transparent; color: #f4f4f5; font-size: 12px; font-weight: 800; letter-spacing: .04em; text-decoration: none">EN</a><a href="../it/" hreflang="it" lang="it" title="Italiano" data-lang="it" style="display: inline-flex; align-items: center; justify-content: center; min-width: 36px; min-height: 36px; padding: 0 6px; border-radius: 999px; background: transparent; color: #f4f4f5; font-size: 12px; font-weight: 800; letter-spacing: .04em; text-decoration: none">IT</a><a href="../nl/" hreflang="nl" lang="nl" title="Nederlands" aria-current="page" data-lang="nl" style="display: inline-flex; align-items: center; justify-content: center; min-width: 36px; min-height: 36px; padding: 0 6px; border-radius: 999px; background: #f59e0b; color: #09090b; font-size: 12px; font-weight: 800; letter-spacing: .04em; text-decoration: none">NL</a><a href="../fr/" hreflang="fr" lang="fr" title="Français" data-lang="fr" style="display: inline-flex; align-items: center; justify-content: center; min-width: 36px; min-height: 36px; padding: 0 6px; border-radius: 999px; background: transparent; color: #f4f4f5; font-size: 12px; font-weight: 800; letter-spacing: .04em; text-decoration: none">FR</a><a href="../es/" hreflang="es" lang="es" title="Español" data-lang="es" style="display: inline-flex; align-items: center; justify-content: center; min-width: 36px; min-height: 36px; padding: 0 6px; border-radius: 999px; background: transparent; color: #f4f4f5; font-size: 12px; font-weight: 800; letter-spacing: .04em; text-decoration: none">ES</a></div>
+        <a href="#funktionen" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; background: #27272a; color: #f4f4f5; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,.3)">Functies</a>
+        <a href="#ablauf" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; background: #27272a; color: #f4f4f5; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,.3)">Zo werkt het</a>
+        <a href="#testphase" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; background: #27272a; color: #f4f4f5; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,.3)">Proefperiode</a>
+        <a href="#anleitung" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px; background: #27272a; color: #f4f4f5; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,.3)">Handleiding</a>
+        <a href="#download" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #f59e0b; color: #09090b; font-size: 14px; font-weight: 800; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,.3)">
+          <svg class="ic" style="width: 18px; height: 18px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+          App downloaden
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" style="background: #09090b; padding: 72px 24px 88px">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+      <div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+        <span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: #27272a; border: 1px solid #3f3f46; color: #fcd34d; font-size: 13px; font-weight: 700; letter-spacing: .04em">
+          <svg class="ic" style="width: 16px; height: 16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>
+          Voor zwaar transport en kraanwerk
+        </span>
+        <h1 style="margin: 0; font-size: clamp(36px, 5vw, 60px); line-height: 1.05; font-weight: 800; letter-spacing: -.02em; color: #ffffff">De opdrachtbon die rechtstreeks van de cabine naar kantoor gaat.</h1>
+        <p style="margin: 0; font-size: clamp(20px, 2.4vw, 26px); line-height: 1.3; font-weight: 700; color: #fbbf24">Met urenregistratie – met één druk op de knop of automatisch via de bedrijfswifi.</p>
+        <p style="margin: 0; font-size: 19px; line-height: 1.6; color: #d4d4d8; max-width: 560px">Gravio Plus vervangt het papieren formulier: transportopdracht invullen, de klant laten tekenen, foto’s toevoegen – en de kant-en-klare pdf via WhatsApp naar de planning sturen. Met uw logo, uw voertuigen, uw velden.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px">
+          <a href="#download" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 14px; background: #f59e0b; color: #09090b; font-size: 16px; font-weight: 800; text-decoration: none; box-shadow: 0 10px 30px rgba(245,158,11,.25)">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+            Gratis uitproberen
+          </a>
+          <a href="#funktionen" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; border-radius: 14px; background: #27272a; border: 1px solid #3f3f46; color: #f4f4f5; font-size: 16px; font-weight: 700; text-decoration: none">Functies bekijken</a>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; color: #a1a1aa; font-size: 14px">
+          <span style="display: inline-flex; align-items: center; gap: 6px"><svg class="ic" style="width: 16px; height: 16px; color: #34d399" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Android-app</span>
+          <span style="display: inline-flex; align-items: center; gap: 6px"><svg class="ic" style="width: 16px; height: 16px; color: #34d399" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Werkt offline</span>
+          <span style="display: inline-flex; align-items: center; gap: 6px"><svg class="ic" style="width: 16px; height: 16px; color: #34d399" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Gegevens blijven op het toestel</span>
+        </div>
+      </div>
+
+      <!-- Handy-Mockup der App -->
+      <div style="flex: 0 1 340px; min-width: 0; display: flex; justify-content: center">
+        <div style="width: 320px; max-width: 100%; border-radius: 40px; background: #18181b; border: 10px solid #27272a; box-shadow: 0 40px 80px rgba(0,0,0,.6), 0 0 0 1px #3f3f46; overflow: hidden">
+          <div style="background: linear-gradient(135deg, #dc2626 0 20%, #ffffff 20% 40%, #dc2626 40% 60%, #ffffff 60% 80%, #dc2626 80% 100%); border-bottom: 2px solid #991b1b; padding: 14px 12px 10px; display: flex; align-items: center; justify-content: space-between">
+            <img src="../logo.png" alt="" style="height: 34px; width: auto">
+            <div style="display: flex; gap: 6px">
+              <span style="width: 32px; height: 32px; border-radius: 999px; background: #27272a; color: #f4f4f5; display: flex; align-items: center; justify-content: center"><svg class="ic" style="width: 15px; height: 15px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg></span>
+              <span style="width: 32px; height: 32px; border-radius: 999px; background: #f59e0b; color: #09090b; display: flex; align-items: center; justify-content: center"><svg class="ic" style="width: 15px; height: 15px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
+              <span style="width: 32px; height: 32px; border-radius: 999px; background: #059669; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg class="ic" style="width: 15px; height: 15px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg></span>
+            </div>
+          </div>
+          <div style="padding: 14px; display: flex; flex-direction: column; gap: 10px; background: #18181b">
+            <div style="border-radius: 14px; background: #27272a; border: 1px solid #3f3f46; padding: 12px">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px">
+                <span style="font-size: 13px; font-weight: 800; color: #fcd34d">Kopgegevens</span>
+                <svg class="ic" style="width: 16px; height: 16px; color: #a1a1aa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"></path></svg>
+              </div>
+              <div style="font-size: 10px; color: #a1a1aa; margin-bottom: 3px">Klant</div>
+              <div style="height: 30px; border-radius: 8px; background: #18181b; border: 1px solid #3f3f46; margin-bottom: 8px; padding: 0 8px; display: flex; align-items: center; font-size: 11px; color: #e4e4e7">[Klantnaam]</div>
+              <div style="display: flex; gap: 8px">
+                <div style="flex: 1">
+                  <div style="font-size: 10px; color: #a1a1aa; margin-bottom: 3px">Datum</div>
+                  <div style="height: 30px; border-radius: 8px; background: #18181b; border: 1px solid #3f3f46; padding: 0 8px; display: flex; align-items: center; font-size: 11px; color: #e4e4e7">26.10.2026</div>
+                </div>
+                <div style="flex: 1">
+                  <div style="font-size: 10px; color: #a1a1aa; margin-bottom: 3px">Voertuig</div>
+                  <div style="height: 30px; border-radius: 8px; background: #18181b; border: 1px solid #3f3f46; padding: 0 8px; display: flex; align-items: center; font-size: 11px; color: #e4e4e7">Kraan 60 t</div>
+                </div>
+              </div>
+            </div>
+            <div style="border-radius: 14px; background: #27272a; border: 1px solid #3f3f46; padding: 12px; display: flex; align-items: center; justify-content: space-between">
+              <span style="font-size: 13px; font-weight: 800; color: #f4f4f5">Rit 1 · Laden → Lossen</span>
+              <svg class="ic" style="width: 16px; height: 16px; color: #a1a1aa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+            </div>
+            <div style="border-radius: 14px; background: #27272a; border: 1px solid #3f3f46; padding: 12px">
+              <div style="font-size: 13px; font-weight: 800; color: #f4f4f5; margin-bottom: 8px">Handtekening klant</div>
+              <div style="height: 70px; border-radius: 10px; background: #ffffff; border: 2px dashed #f59e0b; display: flex; align-items: center; justify-content: center">
+                <svg viewBox="0 0 160 40" style="width: 140px; height: 36px" aria-hidden="true"><path d="M6 28 C 20 6, 28 36, 40 20 S 60 8, 66 26 S 88 34, 96 14 S 120 30, 132 22 S 150 18, 154 24" fill="none" stroke="#1d4ed8" stroke-width="2.4" stroke-linecap="round"></path></svg>
+              </div>
+            </div>
+            <div style="height: 44px; border-radius: 12px; background: #059669; color: #ffffff; font-size: 13px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px">Pdf naar planning sturen</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warnband als Trenner -->
+  <div aria-hidden="true" style="height: 14px; background: repeating-linear-gradient(135deg, #f59e0b 0 22px, #18181b 22px 44px)"></div>
+
+  <!-- Funktionen (helle Fläche wie der Day Mode der App) -->
+  <section id="funktionen" style="background: #ffffff; color: #18181b; padding: 88px 24px">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+      <div style="display: flex; flex-direction: column; gap: 12px; max-width: 680px">
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: .12em; color: #b45309">FUNCTIES</span>
+        <h2 style="margin: 0; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.15; font-weight: 800; color: #09090b">Alles wat de chauffeur onderweg nodig heeft – in één app.</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #52525b">Opgebouwd als een echte opdrachtbon, alleen sneller: secties klappen open, keuzelijsten onthouden uw invoer.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+
+        <div style="border-radius: 18px; background: #ffffff; border: 1px solid #fde68a; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.04)">
+          <span style="width: 48px; height: 48px; border-radius: 14px; background: #eff6ff; border: 1px solid #bfdbfe; color: #2563eb; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M16 13H8"></path><path d="M16 17H8"></path><path d="M10 9H8"></path></svg></span>
+          <h3 style="margin: 0; font-size: 19px; font-weight: 800; color: #09090b">Transportopdracht</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b">Kopgegevens en zoveel ritten als u wilt. Voertuigen, aanhangers, materiaal en diensten uit keuzelijsten – één pdf-pagina per rit.</p>
+        </div>
+
+        <div style="border-radius: 18px; background: #ffffff; border: 1px solid #fde68a; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.04)">
+          <span style="width: 48px; height: 48px; border-radius: 14px; background: #eff6ff; border: 1px solid #bfdbfe; color: #2563eb; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"></path></svg></span>
+          <h3 style="margin: 0; font-size: 19px; font-weight: 800; color: #09090b">Overdrachtsprotocol</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b">De klant tekent direct op de telefoon. De handtekening komt op de juiste plek in de opdrachtbon.</p>
+        </div>
+
+        <div style="border-radius: 18px; background: #ffffff; border: 1px solid #fde68a; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.04)">
+          <span style="width: 48px; height: 48px; border-radius: 14px; background: #eff6ff; border: 1px solid #bfdbfe; color: #2563eb; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg></span>
+          <h3 style="margin: 0; font-size: 19px; font-weight: 800; color: #09090b">Foto’s bij de opdracht</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b">Lading, schade, situatie ter plaatse – met de camera vastleggen en direct aan de opdracht toevoegen.</p>
+        </div>
+
+        <div style="border-radius: 18px; background: #ffffff; border: 1px solid #fde68a; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.04)">
+          <span style="width: 48px; height: 48px; border-radius: 14px; background: #eff6ff; border: 1px solid #bfdbfe; color: #2563eb; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg></span>
+          <h3 style="margin: 0; font-size: 19px; font-weight: 800; color: #09090b">Werktijd, ook via wifi</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b">Werktijden registreren – desgewenst automatisch, zodra de telefoon de bedrijfswifi herkent.</p>
+        </div>
+
+        <div style="border-radius: 18px; background: #ffffff; border: 1px solid #fde68a; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.04)">
+          <span style="width: 48px; height: 48px; border-radius: 14px; background: #eff6ff; border: 1px solid #bfdbfe; color: #2563eb; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path></svg></span>
+          <h3 style="margin: 0; font-size: 19px; font-weight: 800; color: #09090b">Verlofaanvraag</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b">Verlof direct vanuit de app aanvragen – als nette pdf met uw briefhoofd.</p>
+        </div>
+
+        <div style="border-radius: 18px; background: #ffffff; border: 1px solid #fde68a; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.04)">
+          <span style="width: 48px; height: 48px; border-radius: 14px; background: #eff6ff; border: 1px solid #bfdbfe; color: #2563eb; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg></span>
+          <h3 style="margin: 0; font-size: 19px; font-weight: 800; color: #09090b">Pdf-bouwdoos</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b">Ontwerp de opdrachtbon zelf: secties aan/uit, volgorde, koppen, accentkleur en een eigen tekst.</p>
+        </div>
+
+        <div style="border-radius: 18px; background: #ffffff; border: 1px solid #fde68a; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.04)">
+          <span style="width: 48px; height: 48px; border-radius: 14px; background: #eff6ff; border: 1px solid #bfdbfe; color: #2563eb; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span>
+          <h3 style="margin: 0; font-size: 19px; font-weight: 800; color: #09090b">Opdrachten van de planning</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b">Met Gravio Plus Dispo – gratis inbegrepen – een opdracht op de pc aanmaken en versleuteld via een WhatsApp-link naar de telefoon van de chauffeur sturen.</p>
+        </div>
+
+        <div style="border-radius: 18px; background: #ffffff; border: 1px solid #fde68a; padding: 24px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.04)">
+          <span style="width: 48px; height: 48px; border-radius: 14px; background: #eff6ff; border: 1px solid #bfdbfe; color: #2563eb; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg></span>
+          <h3 style="margin: 0; font-size: 19px; font-weight: 800; color: #09090b">Meertalig</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b">App en pdf apart in te stellen: Duits, Engels, Italiaans, Nederlands, Frans, Spaans.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Ablauf -->
+  <section id="ablauf" style="background: #18181b; padding: 88px 24px">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+      <div style="display: flex; flex-direction: column; gap: 12px; max-width: 680px">
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: .12em; color: #fbbf24">ZO WERKT HET</span>
+        <h2 style="margin: 0; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.15; font-weight: 800; color: #ffffff">Drie stappen in plaats van papierwerk.</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
+        <div style="border-radius: 18px; background: #27272a; border: 1px solid #3f3f46; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+          <span style="width: 44px; height: 44px; border-radius: 999px; background: #f59e0b; color: #09090b; font-size: 20px; font-weight: 800; display: flex; align-items: center; justify-content: center">1</span>
+          <h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #ffffff">De opdracht komt op de telefoon</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #d4d4d8">De planning stuurt kopgegevens en ritten via een WhatsApp-link. Eén tik – en het formulier in Gravio Plus is ingevuld.</p>
+        </div>
+        <div style="border-radius: 18px; background: #27272a; border: 1px solid #3f3f46; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+          <span style="width: 44px; height: 44px; border-radius: 999px; background: #f59e0b; color: #09090b; font-size: 20px; font-weight: 800; display: flex; align-items: center; justify-content: center">2</span>
+          <h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #ffffff">Ter plaatse afhandelen</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #d4d4d8">Tijden, wachttijd, diensten en foto’s invullen. De klant tekent op het scherm.</p>
+        </div>
+        <div style="border-radius: 18px; background: #27272a; border: 1px solid #3f3f46; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+          <span style="width: 44px; height: 44px; border-radius: 999px; background: #f59e0b; color: #09090b; font-size: 20px; font-weight: 800; display: flex; align-items: center; justify-content: center">3</span>
+          <h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #ffffff">Pdf naar kantoor</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #d4d4d8">De kant-en-klare opdrachtbon gaat direct naar de WhatsApp-chat van de planning – klaar voor facturering en opgeslagen in het archief.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tour-Archiv -->
+  <section id="archiv" style="background: #ffffff; color: #18181b; padding: 88px 24px">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
+      <!-- Archiv-Fenster wie in der App -->
+      <div style="flex: 1 1 380px; min-width: 0">
+        <div style="border-radius: 20px; background: #18181b; border: 1px solid #3f3f46; padding: 20px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 30px 60px rgba(0,0,0,.25)">
+          <div style="display: flex; align-items: center; gap: 10px; color: #fbbf24; font-weight: 800; font-size: 16px">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14a9 3 0 0 0 18 0V5"></path><path d="M3 12a9 3 0 0 0 18 0"></path></svg>
+            Rittenarchief
+          </div>
+          <div style="height: 42px; border-radius: 10px; background: #27272a; border: 1px solid #3f3f46; padding: 0 12px; display: flex; align-items: center; gap: 8px; font-size: 14px; color: #a1a1aa">
+            <svg class="ic" style="width: 16px; height: 16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            Ritten zoeken …
+          </div>
+          <div style="border-radius: 12px; background: #27272a; border: 1px solid #3f3f46; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+            <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+              <span style="font-size: 14px; font-weight: 700; color: #f4f4f5">[Klant A] · 2 ritten</span>
+              <span style="font-size: 12px; color: #a1a1aa">24.10.2026 · Kraan 60 t</span>
+            </div>
+            <span style="flex-shrink: 0; padding: 3px 8px; border-radius: 6px; background: #064e3b; color: #6ee7b7; font-size: 11px; font-weight: 700">verzonden</span>
+          </div>
+          <div style="border-radius: 12px; background: #27272a; border: 1px solid #3f3f46; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+            <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+              <span style="font-size: 14px; font-weight: 700; color: #f4f4f5">[Klant B] · 1 rit</span>
+              <span style="font-size: 12px; color: #a1a1aa">22.10.2026 · Trekker + dieplader</span>
+            </div>
+            <span style="flex-shrink: 0; padding: 3px 8px; border-radius: 6px; background: #064e3b; color: #6ee7b7; font-size: 11px; font-weight: 700">verzonden</span>
+          </div>
+          <div style="border-radius: 12px; background: #27272a; border: 1px solid #3f3f46; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+            <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+              <span style="font-size: 14px; font-weight: 700; color: #f4f4f5">[Klant C] · 3 ritten</span>
+              <span style="font-size: 12px; color: #a1a1aa">20.10.2026 · Kraan 40 t</span>
+            </div>
+            <span style="flex-shrink: 0; padding: 3px 8px; border-radius: 6px; background: #3f3f46; color: #e4e4e7; font-size: 11px; font-weight: 700">opgeslagen</span>
+          </div>
+        </div>
+      </div>
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: .12em; color: #b45309">RITTENARCHIEF</span>
+        <h2 style="margin: 0; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.15; font-weight: 800; color: #09090b">Elke gereden rit blijft bewaard.</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #52525b">Gravio Plus houdt een eigen database bij van alle opdrachten en ritten – direct op het toestel, zonder cloud en zonder account.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; padding-top: 6px">
+          <div style="display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: #27272a"><svg class="ic" style="color: #b45309; margin-top: 2px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Automatisch gearchiveerd zodra de pdf verzonden of opgeslagen is</span></div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: #27272a"><svg class="ic" style="color: #b45309; margin-top: 2px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Ritten doorzoeken – op klant, datum of voertuig</span></div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: #27272a"><svg class="ic" style="color: #b45309; margin-top: 2px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Oude opdracht opnieuw laden – ideaal voor terugkerende ritten</span></div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: #27272a"><svg class="ic" style="color: #b45309; margin-top: 2px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Blijft ook na de proefperiode leesbaar – er gaat niets verloren</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eigene Firma -->
+  <section style="background: #09090b; padding: 88px 24px">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: .12em; color: #fbbf24">UW BEDRIJF, UW OPDRACHTBON</span>
+        <h2 style="margin: 0; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.15; font-weight: 800; color: #ffffff">In vijf minuten ingericht.</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #d4d4d8">Gravio Plus is neutraal – zonder klanten of voertuiglijsten van anderen. U vult alleen in wat uw bedrijf nodig heeft.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; padding-top: 6px">
+          <div style="display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: #e4e4e7"><svg class="ic" style="color: #f59e0b; margin-top: 2px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Logo, bedrijfsnaam en voettekst op elk formulier</span></div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: #e4e4e7"><svg class="ic" style="color: #f59e0b; margin-top: 2px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Eigen voertuigen, aanhangers, materiaal en factureringswijzen</span></div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: #e4e4e7"><svg class="ic" style="color: #f59e0b; margin-top: 2px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Eigen keuzevelden, verplichte velden en diensten</span></div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: #e4e4e7"><svg class="ic" style="color: #f59e0b; margin-top: 2px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>WhatsApp-nummer van de planning invullen – klaar</span></div>
+        </div>
+      </div>
+      <!-- Einstellungs-Fenster wie in der App -->
+      <div style="flex: 1 1 380px; min-width: 0">
+        <div style="border-radius: 20px; background: #18181b; border: 1px solid #3f3f46; padding: 22px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 30px 60px rgba(0,0,0,.5)">
+          <div style="display: flex; align-items: center; gap: 10px; color: #fbbf24; font-weight: 800; font-size: 16px">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
+            Bedrijfsgegevens &amp; logo
+          </div>
+          <div style="height: 84px; border-radius: 12px; border: 2px dashed #52525b; display: flex; align-items: center; justify-content: center; color: #a1a1aa; font-size: 14px">[Uw logo]</div>
+          <div>
+            <div style="font-size: 12px; color: #a1a1aa; margin-bottom: 4px">Bedrijfsnaam</div>
+            <div style="height: 42px; border-radius: 10px; background: #27272a; border: 1px solid #3f3f46; padding: 0 12px; display: flex; align-items: center; font-size: 14px; color: #f4f4f5">[Uw bedrijf BV]</div>
+          </div>
+          <div>
+            <div style="font-size: 12px; color: #a1a1aa; margin-bottom: 4px">WhatsApp-nummer van de planning</div>
+            <div style="height: 42px; border-radius: 10px; background: #27272a; border: 1px solid #3f3f46; padding: 0 12px; display: flex; align-items: center; font-size: 14px; color: #f4f4f5">+49 …</div>
+          </div>
+          <div style="height: 44px; border-radius: 10px; background: #f59e0b; color: #09090b; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center">Opslaan</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testphase & Freischaltung -->
+  <section id="testphase" style="background: #ffffff; color: #18181b; padding: 88px 24px">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+      <div style="display: flex; flex-direction: column; gap: 12px; max-width: 680px">
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: .12em; color: #b45309">PROEFPERIODE &amp; PRIJZEN</span>
+        <h2 style="margin: 0; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.15; font-weight: 800; color: #09090b">Eerst uitproberen, dan activeren.</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #52525b">Eén licentie geldt voor één toestel, dus één chauffeurstelefoon, en loopt een jaar. Hoe meer toestellen, hoe voordeliger.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
+        <div style="border-radius: 20px; background: #fafafa; border: 1px solid #e4e4e7; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+          <h3 style="margin: 0; font-size: 22px; font-weight: 800; color: #09090b">Proefperiode</h3>
+          <div style="font-size: 40px; font-weight: 800; color: #09090b">0 €</div>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #52525b">7 dagen met alle functies. Geen aanmelding, geen betaalgegevens. Daarna blijven archief en werktijden leesbaar.</p>
+          <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px">
+            <span style="display: inline-flex; align-self: center; padding: 4px 12px; border-radius: 999px; background: #18181b; color: #facc15; border: 1px solid #facc15; font-size: 12px; font-weight: 800; letter-spacing: .14em">BINNENKORT</span>
+            <a aria-disabled="true" title="Binnenkort beschikbaar" style="display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #d4d4d8; color: #52525b; font-size: 15px; font-weight: 800; text-decoration: none; cursor: not-allowed">App downloaden</a>
+          </div>
+        </div>
+        <div style="border-radius: 20px; background: #ffffff; border: 2px solid #f59e0b; padding: 32px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 20px 40px rgba(245,158,11,.15)">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+            <h3 style="margin: 0; font-size: 22px; font-weight: 800; color: #09090b">Jaarlicentie</h3>
+            <span style="padding: 4px 10px; border-radius: 6px; background: #18181b; color: #facc15; font-size: 11px; font-weight: 800; letter-spacing: .12em">PLUS</span>
+          </div>
+          <div>
+              <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid #e4e4e7">
+                <span style="font-size: 15px; color: #3f3f46">1–2 toestellen</span>
+                <span style="font-size: 22px; font-weight: 800; color: #09090b">99 €<span style="font-size: 13px; font-weight: 600; color: #71717a"> / toestel / jaar</span></span>
+              </div>
+              <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid #e4e4e7">
+                <span style="font-size: 15px; color: #3f3f46">vanaf 3 toestellen</span>
+                <span style="font-size: 22px; font-weight: 800; color: #09090b">89 €<span style="font-size: 13px; font-weight: 600; color: #71717a"> / toestel / jaar</span></span>
+              </div>
+              <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid #e4e4e7">
+                <span style="font-size: 15px; color: #3f3f46">vanaf 10 toestellen</span>
+                <span style="font-size: 22px; font-weight: 800; color: #09090b">79 €<span style="font-size: 13px; font-weight: 600; color: #71717a"> / toestel / jaar</span></span>
+              </div>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start; padding: 14px; border-radius: 12px; background: #fffbeb; border: 1px solid #fde68a">
+            <svg class="ic" style="color: #b45309; margin-top: 1px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+            <span style="font-size: 15px; line-height: 1.5; color: #27272a"><strong>Gravio Plus Dispo gratis inbegrepen</strong> – opdrachten op de pc aanmaken en via een WhatsApp-link naar de chauffeurstelefoon sturen.</span>
+          </div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #52525b">Betaling vooraf op factuur, daarna activering met een code; gegevens en instellingen blijven behouden. 30 dagen voor afloop herinnert de app aan verlenging. Aanbod alleen voor bedrijven. Geen btw berekend volgens § 19 van de Duitse btw-wet (kleineondernemersregeling).</p>
+          <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px">
+            <span style="display: inline-flex; align-self: center; padding: 4px 12px; border-radius: 999px; background: #18181b; color: #facc15; border: 1px solid #facc15; font-size: 12px; font-weight: 800; letter-spacing: .14em">BINNENKORT</span>
+            <a aria-disabled="true" title="Binnenkort beschikbaar" style="display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #fde68a; color: #92400e; font-size: 15px; font-weight: 800; text-decoration: none; cursor: not-allowed">Activeringscode aanvragen</a>
+          </div>
+        </div>
+      </div>
+      <div style="border-radius: 20px; background: #fafafa; border: 1px solid #e4e4e7; padding: 28px; display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+          <h3 style="margin: 0; font-size: 20px; font-weight: 800; color: #09090b">Zo koopt u de licentie</h3>
+          <span style="padding: 4px 12px; border-radius: 999px; background: #fffbeb; border: 1px solid #fde68a; color: #92400e; font-size: 13px; font-weight: 700">Vooruitbetaling (overschrijving)</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px">
+        <div style="display: flex; gap: 14px; align-items: flex-start">
+          <span style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 999px; background: #18181b; color: #facc15; font-weight: 800; display: flex; align-items: center; justify-content: center">1</span>
+          <div style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px; color: #09090b">Apparaatnummers sturen</strong><span style="font-size: 14px; line-height: 1.55; color: #52525b">In de app onder Menu → Activeren staat het apparaatnummer van elke telefoon. Stuur ze allemaal via WhatsApp of e-mail.</span></div>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start">
+          <span style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 999px; background: #18181b; color: #facc15; font-weight: 800; display: flex; align-items: center; justify-content: center">2</span>
+          <div style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px; color: #09090b">Factuur ontvangen</strong><span style="font-size: 14px; line-height: 1.55; color: #52525b">U ontvangt een factuur voor de jaarlicenties tegen staffelprijs, met bankgegevens.</span></div>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start">
+          <span style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 999px; background: #18181b; color: #facc15; font-weight: 800; display: flex; align-items: center; justify-content: center">3</span>
+          <div style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px; color: #09090b">Overmaken</strong><span style="font-size: 14px; line-height: 1.55; color: #52525b">Vermeld het factuurnummer als omschrijving.</span></div>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start">
+          <span style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 999px; background: #18181b; color: #facc15; font-weight: 800; display: flex; align-items: center; justify-content: center">4</span>
+          <div style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: 16px; color: #09090b">Codes ontvangen</strong><span style="font-size: 14px; line-height: 1.55; color: #52525b">Na ontvangst van de betaling komen de activeringscodes via WhatsApp – plakken, klaar.</span></div>
+        </div>
+        </div>
+        <p style="margin: 0; font-size: 13px; color: #71717a">Verlengen na een jaar gaat net zo: factuur, overschrijving, nieuwe code. De app herinnert u 30 dagen voor afloop.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Anleitung -->
+  <section id="anleitung" style="background: #18181b; padding: 88px 24px">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+      <div style="display: flex; flex-direction: column; gap: 12px; max-width: 680px">
+        <span style="font-size: 13px; font-weight: 800; letter-spacing: .12em; color: #fbbf24">HANDLEIDING</span>
+        <h2 style="margin: 0; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.15; font-weight: 800; color: #ffffff">Van installatie tot de eerste opdracht.</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #d4d4d8">Stap voor stap – zo is Gravio Plus klaar voor gebruik in uw bedrijf.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 6px">
+          <a href="../handbuch/Gravio-Plus-Handbuch.pdf" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 12px; background: #27272a; border: 1px solid #3f3f46; color: #f4f4f5; font-size: 14px; font-weight: 700; text-decoration: none">
+            <svg class="ic" style="width: 18px; height: 18px; color: #fbbf24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+            Handleiding Gravio Plus (pdf, Duits)</a>
+          <a href="../handbuch/Gravio-Plus-Dispo-Handbuch.pdf" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 12px; background: #27272a; border: 1px solid #3f3f46; color: #f4f4f5; font-size: 14px; font-weight: 700; text-decoration: none">
+            <svg class="ic" style="width: 18px; height: 18px; color: #fbbf24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+            Handleiding Gravio Plus Dispo (pdf, Duits)</a>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px">
+
+        <div style="border-radius: 18px; background: #27272a; border: 1px solid #3f3f46; overflow: hidden">
+          <div style="padding: 18px 24px; background: #3f3f46; display: flex; align-items: center; gap: 12px">
+            <svg class="ic" style="color: #fbbf24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+            <h3 style="margin: 0; font-size: 18px; font-weight: 800; color: #ffffff">1 · App installeren</h3>
+          </div>
+          <ol style="margin: 0; padding: 20px 24px 24px 44px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.55; color: #e4e4e7">
+            <li>Tik op de Android-telefoon hieronder op ‘APK downloaden’.</li>
+            <li>Open het gedownloade bestand.</li>
+            <li>Als Android erom vraagt, ‘Toestaan van deze bron’ inschakelen.</li>
+            <li>Tik op ‘Installeren’ en open Gravio Plus.</li>
+          </ol>
+        </div>
+
+        <div style="border-radius: 18px; background: #27272a; border: 1px solid #3f3f46; overflow: hidden">
+          <div style="padding: 18px 24px; background: #3f3f46; display: flex; align-items: center; gap: 12px">
+            <svg class="ic" style="color: #fbbf24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
+            <h3 style="margin: 0; font-size: 18px; font-weight: 800; color: #ffffff">2 · Bedrijf instellen</h3>
+          </div>
+          <ol style="margin: 0; padding: 20px 24px 24px 44px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.55; color: #e4e4e7">
+            <li>Menu (⋮ rechtsboven) → <strong style="color: #ffffff">Bedrijfsgegevens &amp; logo</strong>: logo, bedrijfsnaam en voettekst invullen.</li>
+            <li>WhatsApp-nummer van de planning invullen – daar gaat later elke opdrachtbon naartoe.</li>
+            <li>Kies de taal van de app en van de pdf.</li>
+          </ol>
+        </div>
+
+        <div style="border-radius: 18px; background: #27272a; border: 1px solid #3f3f46; overflow: hidden">
+          <div style="padding: 18px 24px; background: #3f3f46; display: flex; align-items: center; gap: 12px">
+            <svg class="ic" style="color: #fbbf24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>
+            <h3 style="margin: 0; font-size: 18px; font-weight: 800; color: #ffffff">3 · Lijsten &amp; velden aanpassen</h3>
+          </div>
+          <ol style="margin: 0; padding: 20px 24px 24px 44px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.55; color: #e4e4e7">
+            <li>Menu → <strong style="color: #ffffff">Lijsten &amp; velden</strong>: eigen voertuigen, aanhangers en materiaal toevoegen.</li>
+            <li>Overbodige velden verbergen, eigen keuzevelden toevoegen.</li>
+            <li>Tip: voertuigen met ‘Kran’ (kraan) in de naam tonen automatisch kraanwerk.</li>
+          </ol>
+        </div>
+
+        <div style="border-radius: 18px; background: #27272a; border: 1px solid #3f3f46; overflow: hidden">
+          <div style="padding: 18px 24px; background: #3f3f46; display: flex; align-items: center; gap: 12px">
+            <svg class="ic" style="color: #fbbf24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+            <h3 style="margin: 0; font-size: 18px; font-weight: 800; color: #ffffff">4 · Opdrachtbon vormgeven</h3>
+          </div>
+          <ol style="margin: 0; padding: 20px 24px 24px 44px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.55; color: #e4e4e7">
+            <li>Menu → <strong style="color: #ffffff">Pdf-bouwdoos</strong>: secties aan- of uitzetten en sorteren.</li>
+            <li>Accentkleur, documenttitel en eigen tekst instellen.</li>
+            <li>Controleer het voorbeeld met het oog-icoon bovenaan.</li>
+          </ol>
+        </div>
+
+        <div style="border-radius: 18px; background: #27272a; border: 1px solid #3f3f46; overflow: hidden">
+          <div style="padding: 18px 24px; background: #3f3f46; display: flex; align-items: center; gap: 12px">
+            <svg class="ic" style="color: #fbbf24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"></path></svg>
+            <h3 style="margin: 0; font-size: 18px; font-weight: 800; color: #ffffff">5 · Eerste opdracht invullen</h3>
+          </div>
+          <ol style="margin: 0; padding: 20px 24px 24px 44px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.55; color: #e4e4e7">
+            <li>Kopgegevens invullen of de opdracht van de planning via de WhatsApp-link openen.</li>
+            <li>Rit invullen: tijden, wachttijd, diensten, foto’s.</li>
+            <li>Tik op het handtekeningveld en laat de klant tekenen.</li>
+          </ol>
+        </div>
+
+        <div style="border-radius: 18px; background: #27272a; border: 1px solid #3f3f46; overflow: hidden">
+          <div style="padding: 18px 24px; background: #3f3f46; display: flex; align-items: center; gap: 12px">
+            <svg class="ic" style="color: #fbbf24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+            <h3 style="margin: 0; font-size: 18px; font-weight: 800; color: #ffffff">6 · Versturen &amp; activeren</h3>
+          </div>
+          <ol style="margin: 0; padding: 20px 24px 24px 44px; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.55; color: #e4e4e7">
+            <li>Groen verzendicoon: de opdrachtbon gaat als pdf naar de planning.</li>
+            <li>Elke rit komt automatisch in het <strong style="color: #ffffff">Rittenarchief</strong> (Menu → Archief) en is daar altijd terug te vinden.</li>
+            <li>Voer na de proefperiode de activeringscode in het menu in onder <strong style="color: #ffffff">Activeren</strong>. Voor verlenging plakt u de nieuwe code op dezelfde manier.</li>
+          </ol>
+        </div>
+
+      </div>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; border-radius: 16px; background: #09090b; border: 1px solid #3f3f46; padding: 20px 24px">
+        <span style="font-size: 15px; color: #d4d4d8">De app installeert updates zelf – een melding geeft aan wanneer er een nieuwe versie klaarstaat.</span>
+        <a href="#download" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; border-radius: 12px; background: #f59e0b; color: #09090b; font-size: 14px; font-weight: 800; text-decoration: none">Naar de download</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" style="background: #09090b; padding: 88px 24px">
+    <div style="max-width: 900px; margin: 0 auto; border-radius: 28px; background: #18181b; border: 1px solid #3f3f46; overflow: hidden">
+      <div aria-hidden="true" style="height: 14px; background: linear-gradient(135deg, #dc2626 0 20%, #ffffff 20% 40%, #dc2626 40% 60%, #ffffff 60% 80%, #dc2626 80% 100%)"></div>
+      <div style="padding: 48px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px">
+        <img src="../logo.png" alt="Gravio" style="height: 72px; width: auto">
+        <h2 style="margin: 0; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.15; font-weight: 800; color: #ffffff">Gravio Plus voor Android</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #d4d4d8; max-width: 520px"><span id="apk-version">Huidige versie</span> · Updates komen automatisch via de app.</p>
+        <span style="display: inline-flex; align-self: center; padding: 4px 12px; border-radius: 999px; background: #18181b; color: #facc15; border: 1px solid #facc15; font-size: 12px; font-weight: 800; letter-spacing: .14em">BINNENKORT</span>
+        <a id="apk-link" aria-disabled="true" title="Binnenkort beschikbaar" style="display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 30px; border-radius: 14px; background: #3f3f46; color: #a1a1aa; cursor: not-allowed; font-size: 17px; font-weight: 800; text-decoration: none">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+          APK downloaden
+        </a>
+        <p style="margin: 0; font-size: 13px; color: #a1a1aa">Bij de eerste installatie vraagt Android of apps uit deze bron zijn toegestaan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fußzeile -->
+  <footer id="kontakt" style="background: #09090b; border-top: 1px solid #27272a; padding: 40px 24px">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <span style="font-weight: 800; color: #f4f4f5">Gravio Plus</span>
+        <span style="font-family: 'Dancing Script', 'Segoe Script', 'Brush Script MT', cursive; font-size: 16px; color: #a1a1aa">© 2026 Christian Haake</span>
+      </div>
+      <nav aria-label="Juridisch" style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 14px">
+        <a href="mailto:sevens7.ch@gmail.com">Contact</a>
+        <a href="../impressum.html">Colofon (Duits)</a>
+        <a href="../datenschutz.html">Privacy (Duits)</a>
+      </nav>
+    </div>
+  </footer>
+
+</div>
+<script>
+// Neueste APK aus dem öffentlichen Repo Gravio-Updates (wird bei jedem Build automatisch aktualisiert)
+fetch('https://raw.githubusercontent.com/sevens7ch-tech/Gravio-Updates/main/gravio-public.json', { cache: 'no-store' })
+  .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+  .then(function (u) {
+    var l = document.getElementById('apk-link');
+    if (u.apk && l && l.getAttribute('aria-disabled') !== 'true') l.href = u.apk; // Download erst freigeben: aria-disabled entfernen
+    if (u.version) document.getElementById('apk-version').textContent = 'Huidige versie ' + u.version + (u.build ? ' (Build ' + u.build + ')' : '');
+  })
+  .catch(function () { /* Link bleibt auf der Release-Übersicht */ });
+</script>
+</body>
+</html>
