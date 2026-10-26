@@ -12,7 +12,6 @@ T = {
  'Testphase': ['Trial', 'Prova', 'Proefperiode', 'Essai', 'Prueba'],
  'Anleitung': ['Guide', 'Guida', 'Handleiding', 'Guide', 'Guía'],
  'App laden': ['Get the app', 'Scarica l’app', 'App downloaden', 'Télécharger l’app', 'Descargar la app'],
- 'Für Schwertransport und Kranarbeiten': ['For heavy haulage and crane work', 'Per trasporti eccezionali e lavori con gru', 'Voor zwaar transport en kraanwerk', 'Pour le transport exceptionnel et le levage', 'Para transporte especial y trabajos con grúa'],
  'Der Auftragsschein, der vom Fahrerhaus direkt ins Büro geht.': ['The job sheet that goes straight from the cab to the office.', 'Il foglio di lavoro che va dalla cabina direttamente in ufficio.', 'De opdrachtbon die rechtstreeks van de cabine naar kantoor gaat.', 'Le bon de travail qui part de la cabine directement au bureau.', 'La hoja de trabajo que va de la cabina directamente a la oficina.'],
  'Mit Arbeitszeiterfassung – auf Knopfdruck oder automatisch per Firmen-WLAN.': ['With time tracking – at the push of a button or automatically via the company Wi-Fi.', 'Con rilevazione delle ore – con un tocco o in automatico tramite il Wi-Fi aziendale.', 'Met urenregistratie – met één druk op de knop of automatisch via de bedrijfswifi.', 'Avec le suivi du temps de travail – d’une simple touche ou automatiquement via le Wi-Fi de l’entreprise.', 'Con registro de jornada – con un toque o automáticamente mediante el wifi de la empresa.'],
  'Gravio Plus ersetzt den Papier-Vordruck: Transportauftrag ausfüllen, beim Kunden unterschreiben lassen, Fotos anhängen – und das fertige PDF per WhatsApp an die Dispo schicken. Mit Ihrem Logo, Ihren Fahrzeugen, Ihren Feldern.': ['Gravio Plus replaces the paper form: fill in the transport order, get the customer’s signature, attach photos – and send the finished PDF to dispatch via WhatsApp. With your logo, your vehicles, your fields.', 'Gravio Plus sostituisce il modulo cartaceo: compila l’ordine di trasporto, fai firmare il cliente, allega le foto – e invia il PDF finito alla centrale via WhatsApp. Con il tuo logo, i tuoi veicoli, i tuoi campi.', 'Gravio Plus vervangt het papieren formulier: transportopdracht invullen, de klant laten tekenen, foto’s toevoegen – en de kant-en-klare pdf via WhatsApp naar de planning sturen. Met uw logo, uw voertuigen, uw velden.', 'Gravio Plus remplace le formulaire papier : remplir l’ordre de transport, faire signer le client, joindre des photos – et envoyer le PDF terminé au dispatching par WhatsApp. Avec votre logo, vos véhicules, vos champs.', 'Gravio Plus sustituye al formulario en papel: rellena la orden de transporte, haz firmar al cliente, adjunta fotos – y envía el PDF terminado a la central por WhatsApp. Con tu logotipo, tus vehículos, tus campos.'],
@@ -26,7 +25,6 @@ T = {
  '[Kundenname]': ['[Customer name]', '[Nome cliente]', '[Klantnaam]', '[Nom du client]', '[Nombre del cliente]'],
  'Datum': ['Date', 'Data', 'Datum', 'Date', 'Fecha'],
  'Fahrzeug': ['Vehicle', 'Veicolo', 'Voertuig', 'Véhicule', 'Vehículo'],
- 'Kran 60 t': ['Crane 60 t', 'Gru 60 t', 'Kraan 60 t', 'Grue 60 t', 'Grúa 60 t'],
  'Tour 1 · Beladung → Entladung': ['Trip 1 · Loading → Unloading', 'Viaggio 1 · Carico → Scarico', 'Rit 1 · Laden → Lossen', 'Tournée 1 · Chargement → Déchargement', 'Viaje 1 · Carga → Descarga'],
  'Unterschrift Kunde': ['Customer signature', 'Firma del cliente', 'Handtekening klant', 'Signature du client', 'Firma del cliente'],
  'PDF an Dispo senden': ['Send PDF to dispatch', 'Invia PDF alla centrale', 'Pdf naar planning sturen', 'Envoyer le PDF au dispatching', 'Enviar PDF a la central'],
@@ -164,4 +162,6 @@ T = {
  'Support': ['Support', 'Assistenza', 'Support', 'Assistance', 'Soporte'],
  'Fragen oder ein Problem? Schreiben Sie uns.': ['Questions or a problem? Write to us.', 'Domande o un problema? Scrivici.', 'Vragen of een probleem? Schrijf ons.', 'Une question ou un problème ? Écrivez-nous.', '¿Preguntas o algún problema? Escríbenos.'],
  'E-Mail schreiben': ['Send an e-mail', 'Scrivi un’e-mail', 'E-mail sturen', 'Écrire un e-mail', 'Escribir un correo'],
+ 'Für Schwertransport': ['For heavy haulage', 'Per trasporti eccezionali', 'Voor zwaar transport', 'Pour le transport exceptionnel', 'Para transporte especial'],
+ '[Fahrzeug]': ['[Vehicle]', '[Veicolo]', '[Voertuig]', '[Véhicule]', '[Vehículo]'],
 }
