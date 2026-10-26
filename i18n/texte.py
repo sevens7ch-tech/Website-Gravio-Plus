@@ -161,4 +161,7 @@ T = {
  'Kontakt': ['Contact', 'Contatto', 'Contact', 'Contact', 'Contacto'],
  'Impressum': ['Legal notice (German)', 'Note legali (tedesco)', 'Colofon (Duits)', 'Mentions légales (allemand)', 'Aviso legal (alemán)'],
  'Datenschutz': ['Privacy (German)', 'Privacy (tedesco)', 'Privacy (Duits)', 'Confidentialité (allemand)', 'Privacidad (alemán)'],
+ 'Support': ['Support', 'Assistenza', 'Support', 'Assistance', 'Soporte'],
+ 'Fragen oder ein Problem? Schreiben Sie uns – bitte mit der Geräte-Nummer aus Menü → Freischalten.': ['Questions or a problem? Write to us – please include the device number from Menu → Activate.', 'Domande o un problema? Scrivici – indica il codice dispositivo da Menu → Attiva.', 'Vragen of een probleem? Schrijf ons – graag met het apparaatnummer uit Menu → Activeren.', 'Une question ou un problème ? Écrivez-nous – avec le numéro d’appareil indiqué dans Menu → Activer.', '¿Preguntas o algún problema? Escríbenos – indica el número de dispositivo de Menú → Activar.'],
+ 'E-Mail schreiben': ['Send an e-mail', 'Scrivi un’e-mail', 'E-mail sturen', 'Écrire un e-mail', 'Escribir un correo'],
 }
