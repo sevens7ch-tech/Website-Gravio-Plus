@@ -33,7 +33,11 @@ def switch(lang):
 def head(lang):
     alts = ''.join(f'<link rel="alternate" hreflang="{l}" href="{BASE}{"" if l == "de" else l + "/"}">' for l in LANGS)
     alts += f'<link rel="alternate" hreflang="x-default" href="{BASE}">'
-    js = ("<script>(function(){try{document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');"
+    # Beim Öffnen immer oben beginnen: keine gemerkte Scrollposition, kein altes #Sprungziel aus einem gespeicherten Link
+    top = ("<script>(function(){try{if('scrollRestoration' in history)history.scrollRestoration='manual';"
+           "if(location.hash){history.replaceState(null,'',location.pathname+location.search);}"
+           "window.scrollTo(0,0);window.addEventListener('load',function(){window.scrollTo(0,0);});}catch(e){}})();</script>")
+    js = (top + "<script>(function(){try{document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-lang]');"
           "if(a)localStorage.setItem('gravio_lang',a.getAttribute('data-lang'));});")
     if lang == 'de':  # erster Besuch: Browsersprache wählen, solange niemand selbst gewählt hat
         js += ("if(!localStorage.getItem('gravio_lang')){var ok=" + repr(L).replace("'", '"') + ";"
