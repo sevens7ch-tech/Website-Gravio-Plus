@@ -1,6 +1,6 @@
-# Website Gravio Plus
+# Website GravioLOG Public
 
-Produktseite für die App Gravio Plus (GitHub Pages).
+Produktseite für die App GravioLOG Public (GitHub Pages).
 
 © 2026 Christian Haake, alle Rechte vorbehalten. Vertraulich – Kopieren oder Weitergabe nur mit ausdrücklicher Genehmigung.
 

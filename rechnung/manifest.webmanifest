@@ -1,6 +1,6 @@
 {
-  "name": "Gravio Plus Rechnungen",
-  "short_name": "Rechnungen",
+  "name": "GravioLOG Public Rechnung",
+  "short_name": "Rechnung",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
